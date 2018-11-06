@@ -4,5 +4,7 @@ title: A Few Projects
 ---
 	<h1>{{ page.title }}</h1>
  
-        <p>[under construction]</p>
- 
+  {% for project in site.projects %}
+      <a href="{{ project.url }}"><h2>{{ project.title }}</h2></a>
+      <p>{{ project.abstract }}</p>
+  {% endfor %}
