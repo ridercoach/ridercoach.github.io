@@ -21,7 +21,4 @@ improve my skills in sequential data.  At this point I am thinking
 about using a Keras model with an LSTM layer, and I am currently 
 working on transforming the data into a suitable structure for this.
 
-It may be that as I proceed I will change approaches, but to me that 
-is what the opporunities for exploration on Kaggle are about.
-
 
