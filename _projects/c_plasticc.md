@@ -22,14 +22,14 @@ about using a Keras model with an LSTM layer, and I am currently
 working on transforming the data into a suitable structure for this.
 
 My first public [kernel](https://www.kaggle.com/ridercoach/crude-binary-attempt-w-raw-time-series-data) 
-for this project uses a greatly-simplified approach in order to get 
-a working model which I can then build on. Despite the crudity of it, 
-I got 73% accuracy using only a very small portion of the time-series 
-data.
+for this project uses a very simple approach in order to get 
+a working model to build on. Despite the crudity of it, 
+I get 73% accuracy using only a very small portion of the raw time-series 
+measurements.
 
-The next steps will be to extend this binary classifier to handle all 
-the target classes so that I can make my first submission to the 
-contest, and then work on feature engineering to improve the accuracy.
+The next step will be to extend this binary classifier to handle all 
+the target classes, so I can make my first submission to the 
+contest. After that I will work on feature engineering to improve the accuracy.
 
 
 
