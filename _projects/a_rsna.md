@@ -6,6 +6,11 @@ abstract: Training YOLOv2 to scan chest x-rays.
 
 ## Kaggle RSNA Pneumonia Detection Challenge
 
+Most of us probably regard pneumonia as serious but not life-threatening, but 
+for the elderly and for young children, it can be fatal. Also, as you 
+may gather from the image below, it is not easily diagnosed. The Radiological 
+Society of North America asked Kaggle to help.
+
 I used the Darknet framework with the "regular" version of the YOLOv2 model.
 I started with the yolov2.weights file and trained for 12,300 iterations
 with 2000 (1400 training, 600 test) of the labeled images provided by RSNA.
