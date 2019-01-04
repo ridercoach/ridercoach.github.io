@@ -6,32 +6,31 @@ abstract: Analyzing data from the Large Synoptic Survey Telescope.
 
 ## PLAsTiCC Astronomical Classification Challenge
 
-The goal of the Photometric LSST Astronomical Time-Series Classification 
-Challenge is to develop algorithms to process the huge stream of data 
-that will come from a unique new telescope being constructed in Chile, 
+The Large Synoptic Survey Telescope (LSST) being constructed in Chile is 
 expected to discover 10 to 100 times more time-varying astronomical 
-sources than ever before known. 
+sources than ever before known. The goal of the Photometric LSST Astronomical 
+Time-Series Classification Challenge was to develop algorithms to clasify these new objects.
 
-One way to model sequential behavior is to feed the series of observations 
-into a recurrent NN.
+One way to analyze time-series data is to feed the sequence of observations 
+into a recurrent neural network.
  
-This is tricky for this project, because 
-the measurements in the different passbands are not synchronized, there 
-are large gaps in the sampling, and for 
-some classes of objects the time-varying behavior seems not well represented. 
+This was tricky for this project, because 
+the measurements in the different wavelengths were not synchronized, there 
+were large gaps in the sampling, and for 
+some classes of objects the time-varying behavior seemed not well represented. 
 
-But being curious, I created my first submission to the contest 
+However, being curious, I created my first submission to the contest 
 using a simple Keras 
-LSTM network and some heavy-handed tidying. The accuracy 
+LSTM network and some heavy-handed data cleaning. The accuracy 
 of this approach, shown in 
-the confusion matrix below, is 
+the confusion matrix below, was 
 less than stellar (haha.)
 
 ![](/images/cm.png)
 
-Alternatively, for time-series data, we can reduce the 
+An alternate approach is to reduce the 
 sequence information to its time-varying attributes, 
-such as frequencies, and use a non-recurrent NN.
+such as frequencies, and use a non-recurrent neural network.
 
 The figure below (inspired by Kaggler Siddhartha,) shows the potential 
 value of such extracted characteristics.
@@ -42,14 +41,15 @@ extracted by the [Cesium](http://cesium-ml.org) method _featurize_time_series_.
 
 ![](/images/plasticc-615-plots.png)
 
-Unfortunately, this analysis is time-consuming, and there are not enough 
+Unfortunately, this processing is time-consuming, and by this point in my 
+investigation there were not enough 
 days left in the competition to perform it for all 3.5 million objects 
-in the test set (at least not using the Kaggle environment.) Also, not all 
-classes of objects in the study are this well-behaved.
+in the test set (at least not using the Kaggle environment.) Also, there was reason to 
+expect that for some classes of objects this technique would not provide 
+much leverage.
 
-My ideas for the remaining time are: (a) try to be more clever in my 
-preprocessing for the LSTM approach, and (b) perhaps try using Amazon 
-Sagemaker, which would probably provide more compute power than is 
-available in the Kaggle environment.
+I thought about trying to be more clever in my 
+preprocessing for the LSTM approach, or perhaps using Amazon 
+Sagemaker, but the contest closed before I made any significant further progress.
 
 
